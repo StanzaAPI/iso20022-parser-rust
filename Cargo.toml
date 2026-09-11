@@ -1,0 +1,18 @@
+[package]
+name = "stanzaapi-iso20022-parser"
+version = "1.0.0"
+edition = "2021"
+authors = ["Stanza"]
+description = "Official high-speed Rust client for ISO 20022 Financial Message Parser & Validator"
+license = "MIT"
+readme = "README.md"
+homepage = "https://stanzaapi.com/tools/iso20022-parser"
+repository = "https://github.com/StanzaAPI/iso20022-parser-rust"
+keywords = ["iso-20022","swift","pacs-008","sepa-xml","fednow"]
+categories = ["web-programming::http-client", "development-tools::ffi"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"], optional = true }
